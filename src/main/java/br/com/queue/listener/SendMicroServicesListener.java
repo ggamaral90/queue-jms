@@ -25,7 +25,7 @@ import br.com.queue.domain.Ticket;
 public class SendMicroServicesListener implements MessageListener {
 
     private static Gson gson = new Gson();
-
+    
     @Override
     public void onMessage(Message message) {
 

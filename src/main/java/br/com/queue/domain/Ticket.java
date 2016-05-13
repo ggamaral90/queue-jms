@@ -31,8 +31,6 @@ public class Ticket implements Serializable {
 	private Integer httpCode;
 	private String request;
 
-	private Gson gson;
-
 	public Long getSellerId() {
 		return sellerId;
 	}
@@ -81,14 +79,7 @@ public class Ticket implements Serializable {
 		return request;
 	}
 
-	private Gson getGson() {
-		if (gson == null) {
-			gson = new Gson();
-		}
-		return gson;
-	}
-
 	public String toJson() {
-		return getGson().toJson(this);
+		return new Gson().toJson(this);
 	}
 }

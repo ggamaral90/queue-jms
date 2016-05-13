@@ -14,10 +14,10 @@ import javax.ws.rs.core.Response;
 @Path("/queue")
 public class QueueController {
 
-    @Inject
+	@Inject
     private TicketQueueService ticketQueueService;
-
-    @POST
+    
+	@POST
     @Path("/ticket")
     public Response postTicket(Ticket ticket) {
         ticketQueueService.toTicketQueue(ticket);
